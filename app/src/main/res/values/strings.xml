@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CurrencyConvertor</string>
+    <string name="action_settings">Settings</string>
+    <string name="activity_products">Products</string>
+    <string name="global_empty_data">No data found</string>
+    <string name="product_total_transaction_count">%1$d Transactions</string>
+    <string name="total_transaction_title">Transactions for %s</string>
+    <string name="no_transactions_available">No transactions are available for this product</string>
+    <string name="transaction_sum">Total: £%1$s</string>
+    <string name="transaction_row_amount">£%1$s</string>
+</resources>
