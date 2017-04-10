@@ -34,7 +34,7 @@ public class TransactionEntity implements Parcelable {
         return mSku;
     }
 
-    private BigDecimal convertedGBP = BigDecimal.ZERO;
+    private BigDecimal convertedGBP;
 
     public String inGBP() {
         return Utils.formatNumber(convertedGBP);
@@ -55,6 +55,7 @@ public class TransactionEntity implements Parcelable {
         if(Currency.valueOf(mCurrency) == Currency.GBP) {
             convertedGBP = mAmount;
         } else {
+            convertedGBP = BigDecimal.ZERO;
             RatesConvertor ratesConvertor = new RatesConvertor();
             try {
                 ratesConvertor.execute(Plot.instance().getPoints().get(Plot.instance().findPointIndex(mCurrency)));
